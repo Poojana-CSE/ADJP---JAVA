@@ -1,0 +1,41 @@
+Definition:
+
+A method catches an exception using a combination of the try and catch keywords.
+ A try/catch block is placed around the code that might generate an exception. 
+Code within a try/catch block is referred to as protected code, and the syntax for using
+ try/catch looks like the following:
+Syntax:
+
+try
+{
+   //code
+}catch(ExceptionName e1)
+{
+   //Catch block
+}
+
+Multiple Catch:
+
+Syntax:
+try
+{
+   //Protected code
+}catch(ExceptionType1 e1)
+{
+   //Catch block
+}catch(ExceptionType2 e2)
+{
+   //Catch block
+}catch(ExceptionType3 e3)
+{
+   //Catch block
+}
+
+public String getMessage()
+	Returns a detailed message about the exception that has occurred.
+ This message is initialized in the Throwable constructor.
+
+
+public void printStackTrace()
+	Prints the result of toString() along with the stack trace to System.
+ err, the error output stream.
