@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+   version="2.5">
+
+  <display-name>Welcome to Tomcat</display-name>
+  <description>
+     Welcome to Tomcat
+  </description>
+    <servlet>
+        <servlet-name>1</servlet-name>
+        <servlet-class>First</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>1</servlet-name>
+        <url-pattern>/csc/First</url-pattern>
+    </servlet-mapping>
+  <servlet>
+        <servlet-name>first</servlet-name>
+        <servlet-class>First</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>First</servlet-name>
+        <url-pattern>/First</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>2</servlet-name>
+        <servlet-class>HelloServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>2</servlet-name>
+        <url-pattern>/csc/HelloServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>3</servlet-name>
+        <servlet-class>HtmlServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>3</servlet-name>
+        <url-pattern>/csc/HtmlServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>3.1</servlet-name>
+        <servlet-class>Helloy</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>3.1</servlet-name>
+        <url-pattern>/csc/Helloy</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>3.2</servlet-name>
+        <servlet-class>NamedHello</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>3.2</servlet-name>
+        <url-pattern>/csc/NamedHello</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>4</servlet-name>
+        <servlet-class>NamedSessionHello</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>4</servlet-name>
+        <url-pattern>/csc/NamedSessionHello</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>5.1</servlet-name>
+        <servlet-class>Cookie1</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>5.1</servlet-name>
+        <url-pattern>/csc/Cookie1</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>5.2</servlet-name>
+        <servlet-class>Cookie2</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>5.2</servlet-name>
+        <url-pattern>/csc/Cookie2</url-pattern>
+    </servlet-mapping>
+<servlet>
+        <servlet-name>6</servlet-name>
+        <servlet-class>emaildb</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>6</servlet-name>
+        <url-pattern>/csc/emaildb</url-pattern>
+    </servlet-mapping>
+<servlet>
+        <servlet-name>7</servlet-name>
+        <servlet-class>Login</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>7</servlet-name>
+        <url-pattern>/csc/Login</url-pattern>
+    </servlet-mapping>
+</web-app>

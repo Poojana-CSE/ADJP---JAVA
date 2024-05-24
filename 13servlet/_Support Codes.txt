@@ -1,0 +1,26 @@
+javac -classpath "C:\Program Files\Apache Software Foundation\Tomcat 8.0\lib\servlet-api.jar" *.java
+create database mywebsite
+use we mywebsite
+create table UserInfo(UName varchar(15),UPass varchar(15))
+insert into UserInfo values('Admin','Sigaram')
+insert into UserInfo values('CSC','Jey')
+insert into UserInfo values('Student','CSC')
+insert into UserInfo values('Staff','hello')
+
+
+select * from UserInfo
+
+
+create table Result (RegNo varchar(10),Sname varchar(15),Dob Date,Sub1 int,Sub2 int,Sub3 int,Sub4 int)
+
+insert into Result values('P1001','Aadhi','2000-02-03',99,99,90,99)
+insert into Result values('P1002','Jey','2000-01-01',99,99,90,99)
+insert into Result values('P1003','Kavi','2000-01-02',99,99,90,99)
+insert into Result values('P1004','Mathi','2000-01-03',99,99,90,99)
+insert into Result values('P1005','Jeeva','2000-02-01',99,99,90,99)
+insert into Result values('P1006','Raju','2000-02-01',99,99,90,99)
+insert into Result values('P1007','Ramu','2000-02-02',99,99,90,99)
+insert into Result values('P1008','Mano','2000-02-03',99,99,90,99)
+insert into Result values('P1009','Abhi','2000-02-04',99,99,90,99)
+insert into Result values('P1010','Anu','2000-02-05',99,99,90,99)
+insert into Result values('P1011','Siva','2000-02-06',99,99,90,99)
