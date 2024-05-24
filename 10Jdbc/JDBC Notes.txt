@@ -1,0 +1,112 @@
+DBMS(DataBase Management System) 
+RDBMS(Relational DataBase Management System)
+Database
+----------------
+Foxpro
+MS Access
+DBase
+Star Base
+
+MS SQL
+SQL Server
+MySQL
+SQL lite
+Oracle
+
+Database Languages
+------------------------------
+SQL (structure Query Language)
+
+Sql Commands:
+
+Create a Database 
+	create database DATABASENAME; --> used to create a New Database
+	use DATABASENAME  --> used to open an existing database
+Delete a Database:
+	drop databaseName ---> Used to delete a database permanently
+
+Data Types: int, float, datetime, char, varchar(size),Numeric
+
+Creating Table:
+	The table will be created on currently opened database.
+	create table TABLENAME (FIELDNAME1 DATATYPE,FIELDNAME2 DATATYPE, .....)
+
+Example:
+   	create table student(RegNo varchar(5),StuName varchar(20), FName varchar(20),Gender char,DOB datetime,Age int,Address1 varchar(100), Address2 varchar(100))
+
+
+Insert Values to a Table:
+
+	insert into TABLENAME values(VALUE1,VALUE2,VALUE3,......)
+Note : Numeric type values can be given directly
+            Char, varchar, datetime type values should be given within single quote
+            Date values should given 'YYYY-MM-DD' format
+Example :
+	insert into student('AA0123','Abi','Vetri','F','2019-01-05',1,'Perundurai Road','Thingalur')
+
+
+sp_help student
+	insert into student values('A0123','Abi','Vetri','F','2019-01-05',1,'Perundurai Road','Thingalur')
+	insert into student values('A0124','Athi','Shankar','M','2017-06-05',3,'Perundurai Road','Thingalur')
+	insert into student values('A0125','Aathi','Shankar','M','2017-06-05',3,'Perundurai Road','Thingalur')
+	insert into student values('A0126','Akila','ram','F','2017-06-05',3,'sa Road','Tirupur')
+	
+sp_help Marks
+	insert into Marks values('A0123','Abi','CS',90,90,95,85,100,80,540,90.00,'Pass')
+	insert into Marks (Regno ,StuName ,Dep )  values('A0124','Athi','CS')
+	insert into Marks (Regno ,StuName ,Dep )  values('A0125','Aathi','CS')
+	
+-- Reading Information From a Table
+	select COLUMNNAME1, COLUMNNAME,... from TABLENAME
+	select * from TABLENAME	
+Example:
+	select * from student
+	select * from Marks 
+		
+	select RegNo,StuName from student 
+	select RegNo,StuName,dep from Marks
+-- where clause
+	select COLUMNNAME1, COLUMNNAME,... from TABLENAME where CONDITIONS
+	select * from student where RegNo = 'A0123'
+	select * from student where Age >=2	
+	select * from student where Age <2	
+	select * from student where FName ='Shankar'
+	select * from student where Address2  ='Thingalur'
+	select * from student where Address2  <> 'Thingalur'
+Update Existing data on a Table:
+---------------------------------------------
+	update TABLENAME set COLUMNNAME1=VALUE,COLUMNNAME2=VALUE,.... [where CONDITION]
+	
+Example:
+	update Marks set result='Pass'
+	update Marks set M1=85,M2=55,M3=63,M4=98,M5=97,M6=91 where Regno='A0124'
+	update Marks set M1=95,M2=95,M3=63,M4=78,M5=87,M6=91 where Regno='A0125'
+	update Marks set Total =M1+M2+M3+M4+M5+M6 
+	update Marks set Avrg=Total/6
+
+	update Marks set Result='Pass' where M1>=35 and M2>=35 and M3>=35 and M4>=35 and M5>=35 and M6>=35
+Delete Records:
+	delete from TABLENAME [where CONDITION]
+	
+Example:
+	delete from Student where RegNo='A0123'
+	delete from marks where Result='Fail'
+
+Database Connectivity
+====================
+In java we use JDBC to connect database.
+Packages needed to connect database
+java.sql.*;
+
+Classes used for working with database are:
+===================================
+Connection
+Statement
+Result set
+
+DriverManager
+Connection string : The connection string is string data wich contains the complete information about the database wich is connected with java. such as Database name / database type / database location / database login credentials.
+DataSourceName (DSN) : The DSN is tocken / a reference is used to locate / identify the Dabase. The DSN has to be created on ODBC(open  database connectivity) in our Operating System.
+1. Start -> Control Panel--> Administrative Tools --> DataSources
+2. Start --> Run --> ODBCAD32 
+
