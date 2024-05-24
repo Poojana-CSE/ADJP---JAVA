@@ -1,0 +1,24 @@
+
+Constructor
+-----------
+Constructor is a special function used to initialize the class members.
+The constructor can automatically invoked while creating an object.
+
+1. The constructor name should same as the class name.
+2. It should be a public member
+3. It has no return type
+4. Constructor can be parameterized
+5. It can be overloaded
+
+Type of Constructor
+--------------------
+ Default Constructor   -> Has no arguments
+ Parameterized  Constructor  -> Has arguments
+ Copy Constructor -> Has object as argument
+
+Destructor
+-------------
+It is a special function used to destroy the data members when program. 
+It has no arguments
+it should  return a boolean value
+The destructor Finalize()
