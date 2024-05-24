@@ -1,0 +1,110 @@
+Swing
+
+=> Part of the JFC (Java Foundation Classes) Library => It's a control set use with Java
+		# Swing
+		#Cut and Paste =>Clip board Support
+		#Java 2D =>Improved Color, image and text support 
+=> Extension of AWT and it has been integrated in Java 2
+
+Features
+
+=> Lightweight Components 
+		-> It cannot depend on any native system classes
+		-> The Swing Components have their own view
+=> Look and Feel 
+
+Swing Components
+
+ex:-
+	JApplet
+	JButton
+	JCheckBox
+	JComboBox
+	JDialog
+	JFrame
+	JLabel	
+	JRadioButton
+	JScrollPane
+	JSlider
+	JTree 	etc...
+
+
+JFrame
+	-> It is a Container
+	-> Divided into serveral different panes.
+
+Add a Component to a JFrame
+
+1. Create A frame
+	JFrame frm=new JFrame();
+
+2.Get the contentPane
+	Container cp=frm.getContentPane();
+
+3.To add the component
+	cp.add(some Component);
+
+
+Add a Component to the JPanel and then add the panel to the Frame
+
+1. Create A frame
+	JFrame frm=new JFrame();
+
+2. Create a JPanel object
+	JPanel pnl=new JPanel();
+
+3.Add the Components
+	pnl.add(some components);
+
+4. Add the panel to frame
+	frm.setContentPane(pnl);
+
+	JPanel cp=(JPanel)frm.getContentPane();
+
+Button
+	JButton(String)
+	JButton(Icon)
+		Icon obj=new ImageIcon("Path");
+	JButton(String,Icon)
+
+Label
+	JLabel(String)
+	JLabel(String,Icon,int) (LEFT,CENTER,RIGHT)
+
+TextField
+	JTextField(int)
+	JTextField(String,int)
+
+PasswordField
+	JPasswordField(int)
+	JPasswordField(String,int)
+	
+
+Event Handling
+
+Event				Method				ListenerMethod
+
+ActionEvent 			public Object getSource()		public void actionPerformed(ActionEvent)
+(for buttons)
+
+AdjustmentEvent			public int getValue()			public void adjustmentValueChanged(Adjevent)
+(for Scrollbars)			public Adjustment getAdjustable()
+				public int getAdjustmentType()
+
+FocusEvent			public Boolean is Temporary()		public void focusGained(FocusEvent)
+(When the Component						public void focusLost(Fevent)
+gains or losses the foculs)
+
+ItemEvent				public void getItem()			public void itemStateChanged(ItemEvent)
+(For Choice list,checkbox, list)		public ItemSelectable getItemSelectable()	
+				public int getStateChange()
+
+KeyEvent				public char getKeyChar()		public void keyPressed(KeyEvent)
+(for trapping events)			public int getKeyCode()		public void keyReleased(KeyEvent)
+				public boolean isActionKey()		public void keyTyped(KeyEvent)
+
+MouseEvent			public int getClickCount()		public void mouseClicked(ME)
+				public Point getPoint()		Entered, Pressed, Exited, Released
+				public int getX()
+				public int getY()
+
