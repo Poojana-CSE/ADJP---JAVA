@@ -1,0 +1,30 @@
+FileInputStream:
+
+This stream is used for reading data from the files. Objects can be created using the keyword new and there are several types of constructors available.
+
+
+InputStream f = new FileInputStream("C:/java/hello");
+
+
+File f = new File("C:/java/hello");
+InputStream f = new FileInputStream(f);
+
+
+public void close() throws IOException{}
+	This method closes the file output stream. Releases any system resources associated with the file. Throws an IOException.
+
+
+protected void finalize()throws IOException {}
+	This method cleans up the connection to the file. Ensures that the close method of this file output stream is called when there are no more references to this stream. Throws an 	IOException.
+
+
+public int read(int r)throws IOException{}
+	This method reads the specified byte of data from the InputStream. Returns an int. Returns the next byte of data and -1 will be returned if it's end of file.
+
+
+public int read(byte[] r) throws IOException{}
+	This method reads r.length bytes from the input stream into an array. Returns the total number of bytes read. If end of file -1 will be returned.
+
+
+public int available() throws IOException{}
+	Gives the number of bytes that can be read from this file input stream. Returns an int.
