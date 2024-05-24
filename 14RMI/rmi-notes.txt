@@ -1,0 +1,77 @@
+Rmi  System allows an object running in one JVM to invoke methods on an object in another JVM. RMI can communicate only between programs written in Java.
+
+Architecture of RMI :
+--------------------------
+ClassObject ---> Server --->skeleton class--->stub--->  Client
+
+
+Procedure for developing RMI Application :
+---------------------------------------------------
+ServerSide :
+------------
+
+1)Create a Remote interface which contains collection of member functions (remote methods) declaration those will be defined in Remote Class.
+
+2) Create a Remote class and inherit Remote interface & define all remote interface methods (javac remoteservlerclass.java)
+
+3) Create Stub & Skeleton classes for created Remote Class (Using rmic.exe syntax : rmic RemoteServerClassName)
+4) Start Remote Server (start rmiregistry.exe)
+5) Register the Remote class object into server (java remoteserverclass)
+
+
+Client Side :
+-------------
+6) Copy both Remote Interface and Stub class into client Machine from the server.
+7) Create Client Application & use remote server class object in  any client connected in a Remote Server.
+
+
+Stubs
+
+	->	It connects to the remote JVM
+	->	It serializes any arguments to a remote methods
+	->	it reads the values returned by a remote method
+	->	it return the value to the client
+
+Skeleton
+
+	->	it reads the parameters for the remote object
+	->	it locates the object to be called
+	->	it invokes the desired method on remote object
+	->	it transmits the result to the stub.
+
+
+The RMI Packages
+
+ 	- java.rmi
+	- java.rmi.server
+	- java.rmi.registry
+
+
+==> java.rmi Package
+
+	- The Remote Interface
+	- The remoteException class
+
+	- The Naming class
+
+ The Naming class
+
+This class provides method for storing and acquiring References of remote objects in the remote object registry.
+
+Methods - bind(), lookup(), rebind(), unbind(), list().
+
+
+Steps
+
+	1. Type the interface program
+	2. Type the implementation program
+	3. Server program
+	4. Client Program
+
+	5. Compile all the programs (javac program.java)
+	6. Create Stub and Skeleton (rmic implementationprogramname)
+		dir -> List the programs
+	7. Cmd 1 -> Start rmiregistry
+	8. cmd 2	-> Run Serverprogram
+	9. cmd 1 ->Run Client Progr -> You got result at client screen
+	

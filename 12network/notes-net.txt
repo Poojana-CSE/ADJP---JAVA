@@ -1,0 +1,78 @@
+Socket
+
+Socket is a datastructure that maintains necessary information used for communication between client&server. 
+i.e Both end of Communication has its own socket.
+
+Types of Socket
+
+	Stream Socket-Connection Oriented Service (TCP/IP)
+	Datagram Socket - Connectionless Service (Unreliable Datagram Protocol)
+
+
+TCP/IP Client Side
+
+1. Open a Socket
+	Socket myclient;
+	myclient=new Socket("Machine_Name",Portnumber);
+
+(Port is a unique number association with a socket on a machine 
+(or) Port is a numbered socket on a machine
+
+
+it should note between=> 0-1023 are reserved for users or standard services 
+eg-21-FTP      80-Http      23-Telnet)
+
+
+2. InputStream => To receive the response from the server
+
+DataInputStream input=new DataInputStream(client.getInputStream());
+
+3. OutputStream => To send information to the serversocket
+	
+	DataOutputStream
+	PrintStream ps;
+
+	ps=new PrintStream(client.getOutputStream());
+
+4.
+	ps.close();
+	input.close();
+	client.close();
+
+
+TCP/IP Server Side
+
+1. Open a ServerSocket
+
+	ServerSocket ss;
+	ss=new ServerSocket(PortNumber);
+
+2. Also create a socket for listen the client
+	Socket cs;
+	Socket cs1;
+-
+3. Connect the client to server
+	cs=ss.accept();
+
+
+4. InputStream => To receive the response from the client
+
+DataInputStream input=new DataInputStream(cs.getInputStream());
+
+5. OutputStream => To send information to the Client
+	
+	DataOutputStream
+	PrintStream ps;
+	ps=new PrintStream(client.getOutputStream());
+
+6.
+	ps.close();
+	input.close();
+	client.close();
+	server.close();
+
+
+UDP
+
+DatagramPacket => Carry the data as packets
+DatagramSocket => Send or receive the packets
